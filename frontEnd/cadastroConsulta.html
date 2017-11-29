@@ -1,0 +1,54 @@
+<!doctype html>
+
+
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro Consulta</title>
+</head>
+
+<body ng-controller="cadastroConsultaController">
+
+	<div class="container">
+
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Adicionar Consulta </div>
+				<div class="panel-body">
+					<form name="formConsulta">
+
+                        <div class="form-group">
+                            <label>Paciente</label>
+                            <select name="paciente" class="form-control" ng-model="consulta.paciente.id">  	
+                                <option  ng-repeat="p in paciente" value="{{p.id}}">{{p.nome}}</option>
+                            </select>
+                        </div>
+
+						<div class="form-group">
+							<label>Medico </label>
+							<select name="medico" class="form-control" ng-model="consulta.medico.id">  	
+                                 <option  ng-repeat="m in medico" value="{{m.id}}">{{m.nome}}</option>
+                            </select>
+						</div>
+
+						<div class="form-group">
+                             <label>Data </label>
+                             <input type="text" class="form-control" ng-model="consulta.data">
+						</div>
+
+						<div class="form-group">
+                            <label>Hora </label>
+                            <input type="text" class="form-control" ng-model="consulta.hora">
+						</div>
+
+						<button class="btn btn-primary" ng-click="gravar()">Cadastrar</button>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>

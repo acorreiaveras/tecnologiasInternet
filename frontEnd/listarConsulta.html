@@ -1,0 +1,40 @@
+<html>
+        
+        <head>
+            <meta charset="UTF-8">
+            <title>Listar Consultas</title>
+        </head>
+        
+        <body ng-controller="listarConsultaController">
+        
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Lista de Consultas</div>
+                    <div class="panel-body">
+                        <table ng-show="listConsulta.length" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Paciente</th>
+                                    <th>Medico</th>
+                                    <th>Data</th>
+                                    <th>Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="consulta in listConsulta">
+                                    <td> {{consulta.id}} </td>
+                                    <td> {{consulta.paciente}} </td>
+                                    <td> {{consulta.medico}} </td>
+                                    <td> {{consulta.data}} </td>
+                                    <td> {{consulta.hora}} </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div ng-hide="listConsulta.length">Nenhuma Consulta Cadastrado</div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        
+        </html>

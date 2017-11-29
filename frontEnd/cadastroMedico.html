@@ -1,0 +1,50 @@
+<!doctype html>
+
+
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro Médico</title>
+</head>
+
+<body ng-controller="cadastroMedicoController">
+
+	<div class="container">
+
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Adicionar Médico </div>
+				<div class="panel-body">
+					<form name="formAluno">
+
+						<div class="form-group">
+							<label>Nome </label>
+							<input type="text" class="form-control" ng-model="medico.nome">
+						</div>
+
+						<div class="form-group">
+							<label>Data de Nascimento </label>
+							<input type="text" class="form-control" ng-model="medico.dataNascimento">
+						</div>
+
+						<div class="form-group">
+							<label>CRM </label>
+							<input type="text" class="form-control" ng-model="medico.crm">
+						</div>
+
+						<div class="form-group">
+							<label>Especialidade </label>
+							<input type="text" class="form-control" ng-model="medico.especialidade">
+						</div>
+
+						<button class="btn btn-primary" ng-click="gravar()">Cadastrar</button>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>

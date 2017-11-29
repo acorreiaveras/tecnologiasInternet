@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="AgendaMedica" >
+<head>
+<meta charset="UTF-8">
+<title>Agenda Médica</title>
+
+<!--Imports externos: angular, bootstrap e jquery -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+ 
+<script 
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"> 
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!--Imports internos: main e controllers -->
+
+    <script src="js/main.js"></script>
+    <script src="js/cadastroPacienteController.js"></script>
+    <script src="js/listarPacienteController.js"></script>
+    <script src="js/cadastroMedicoController.js"></script>
+    <script src="js/listarMedicoController.js"></script>
+    <script src="js/cadastroConsultaController.js"></script>
+    <script src="js/listarConsultaController.js"></script>
+
+</head>
+
+
+<body>
+<div class="bs-example">
+    <nav id="myNavbar" class="navbar navbar-default" role="navigation">     
+        <div class="container-fluid">                  
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown" class="dropdown-toggle">Paciente <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#/cadastroPaciente">Cadastro</a></li>
+                            <li><a href="#/listaPaciente">Listar</a></li>                                                      
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown" class="dropdown-toggle">Medico <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#/cadastroMedico">Cadastro</a></li>
+                            <li><a href="#/listaMedico">Listar</a></li>                                                      
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown" class="dropdown-toggle">Consulta <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#/cadastroConsulta">Cadastro</a></li>
+                            <li><a href="#/listaConsulta">Listar</a></li>                                                   
+                        </ul>
+                    </li>                    
+                    
+                </ul>                
+            </div>
+        </div>
+    </nav>
+    
+    <div ng-view></div>
+</div>
+
+</body>
+</html>                                     
